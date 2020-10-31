@@ -6,10 +6,12 @@ import android.content.Context
 object RedScreenOfDeath {
     @JvmStatic
     fun init(application: Application) {
-        val crashListener =
-            UncaughtExceptionListener { t, e -> handleUncaughtException(application, t, e) }
-        val crashHandler = UncaughtExceptionHandler(crashListener)
-        Thread.setDefaultUncaughtExceptionHandler(crashHandler)
+        if (BuildConfig.DEBUG) {
+            val crashListener =
+                UncaughtExceptionListener { t, e -> handleUncaughtException(application, t, e) }
+            val crashHandler = UncaughtExceptionHandler(crashListener)
+            Thread.setDefaultUncaughtExceptionHandler(crashHandler)
+        }
     }
 
     private fun handleUncaughtException(context: Context, thread: Thread, throwable: Throwable) {

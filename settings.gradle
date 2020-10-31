@@ -1,4 +1,3 @@
-include ':rsod-no-impl'
 include ':rsod'
 include ':app'
 rootProject.name = "RedScreen Of Death"
