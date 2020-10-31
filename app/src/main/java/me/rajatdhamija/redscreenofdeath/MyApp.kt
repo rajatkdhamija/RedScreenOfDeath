@@ -6,6 +6,6 @@ import me.rajatdhamija.rsod.RedScreenOfDeath
 class MyApp : Application() {
     override fun onCreate() {
         super.onCreate()
-        RedScreenOfDeath.init(this)
+        RedScreenOfDeath.initRSOD(this)
     }
 }
