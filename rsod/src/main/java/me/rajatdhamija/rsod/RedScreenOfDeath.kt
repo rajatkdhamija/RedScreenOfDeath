@@ -5,8 +5,8 @@ import android.content.Context
 
 object RedScreenOfDeath {
     @JvmStatic
-    fun initRSOD(application: Application) {
-        if (BuildConfig.DEBUG) {
+    fun initRSOD(application: Application, buildType: String) {
+        if (buildType == "debug") {
             val crashListener =
                 UncaughtExceptionListener { t, e -> handleUncaughtException(application, t, e) }
             val crashHandler = UncaughtExceptionHandler(crashListener)
