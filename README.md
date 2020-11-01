@@ -57,4 +57,4 @@ public class MyApp extends Application {
 And you are done!
 
 ## Disclaimer
-This will only work in debug build, to make it work on release app pass "release" as second parameter in initRSOD
+This will only work in debug build, to make it work on release app pass "" as second parameter in initRSOD
