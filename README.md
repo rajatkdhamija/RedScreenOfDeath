@@ -27,7 +27,7 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.rajatkdhamija:RedScreenOfDeath:1.5'
+    implementation 'com.github.rajatkdhamija:RedScreenOfDeath:$latest_version'
 }
 ```
 
