@@ -7,5 +7,6 @@ class MyApp : Application() {
     override fun onCreate() {
         super.onCreate()
         RedScreenOfDeath.initRSOD(this, BuildConfig.BUILD_TYPE)
+
     }
 }
