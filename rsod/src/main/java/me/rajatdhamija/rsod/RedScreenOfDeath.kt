@@ -2,6 +2,8 @@ package me.rajatdhamija.rsod
 
 import android.app.Application
 import android.content.Context
+import android.util.Log
+import android.widget.Toast
 
 object RedScreenOfDeath {
     @JvmStatic
@@ -12,6 +14,10 @@ object RedScreenOfDeath {
             val crashHandler = UncaughtExceptionHandler(crashListener)
             Thread.setDefaultUncaughtExceptionHandler(crashHandler)
             application.getString(R.string.share_error)
+            Toast.makeText(application,"Testing private Key ${application.getString(R.string.share_error)}",Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(application,"Testing private Key ${application.getString(R.string.share_error)}",Toast.LENGTH_SHORT).show()
+            Log.d("Release","Release")
         }
     }
 
