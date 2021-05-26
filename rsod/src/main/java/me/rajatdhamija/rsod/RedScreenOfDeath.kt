@@ -11,7 +11,7 @@ object RedScreenOfDeath {
                 UncaughtExceptionListener { t, e -> handleUncaughtException(application, t, e) }
             val crashHandler = UncaughtExceptionHandler(crashListener)
             Thread.setDefaultUncaughtExceptionHandler(crashHandler)
-            BuildConfig.PRIVATE_KEY
+            application.getString(R.string.share_error)
         }
     }
 
